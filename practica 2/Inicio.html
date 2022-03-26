@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Incio</title>
+<meta charset="utf-8">
+<style>
+nav {
+margin: 27px auto 0;
+position: relative;
+width: 470px;
+height: 50px;
+background-color: #34495e;
+border-radius: 30px;
+font-size: 0;
+}
+nav a {
+line-height: 50px;
+height: 100%;
+font-size: 15px;
+display: inline-block;
+position: relative;
+z-index: 1;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+color: white;
+cursor: pointer;
+}
+nav .animation {
+position: absolute;
+height: 100%;
+top: 0;
+z-index: 0;
+transition: all .5s ease 0s;
+border-radius: 30px;
+}
+a:nth-child(1) {
+width: 120px;
+font-family: 'Cherry Swash';
+}
+a:nth-child(2) {
+width: 240px;
+font-family: 'Cherry Swash';
+}
+a:nth-child(3) {
+width: 100px;
+font-family: 'Cherry Swash';
+}
+nav .start-informacion, a:nth-child(1):hover~.animation {
+width: 120px;
+left: 0;
+background-color: #1abc9c;
+}
+nav .start-solucion, a:nth-child(2):hover~.animation {
+width: 240px;
+left: 120px;
+background-color: #e74c3c;
+}
+nav .start-creditos, a:nth-child(3):hover~.animation {
+width: 110px;
+left: 360px;
+background-color: #3498db;
+}
+body {
+font-size: 12px;
+font-family: sans-serif;
+background: url(https://www.xtrafondos.com/wallpapers/montanas-con-nieve-en-el-bosque-3934.jpg);
+background-size: 100vw 100vh;
+background-repeat: no-repeat;
+}
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+h1 {
+text-align: center;
+margin: 40px 0 40px;
+text-align: center;
+font-size: 80px;
+color: #ecf0f1;
+text-shadow: 4px 4px 8px #000000;
+font-family: 'Jokerman', cursive;
+}
+img {
+line-height: 50px;
+}
+p {
+position: relative;
+bottom: 10px;
+width: 100%;
+text-align: center;
+color: #ecf0f1;
+font-family: 'Cherry Swash',cursive;
+font-size: 16px
+}
+marquee {
+}
+</style>
+</head>
+<body>
+<h1 align="center"><font color="red">A</font>ctividad <font
+color="red"><sub>3</sub></font></h1>
+<p align="center">
+<nav>
+<a href="informacion.html">Informacion</a>
+<a href="pruebas.html">Solución de problemas</a>
+<a href="">Creditos</a>
+<div class="animation start-hoem"></div>
+</nav>
+<p>
+<img align="center" src="https://brainfoodmkt.com/wp-content/uploads/2021/07/tipos-de-paginas-web.png"
+                                             width="450" height="280">
+<p>
+Autor:
+<marquee behavior="alternate" direction="left"
+scrollamount="10">
+<b><font size="5">Leonardo Andrey Gaspar Mejía</font></b>
+</marquee>
+	<div class="capa"></div>
+</p>
+</body>
+</html>

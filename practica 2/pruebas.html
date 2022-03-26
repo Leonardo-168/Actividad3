@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<title>Menù Lateral con Css</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+        background: url(https://www.xtrafondos.com/wallpapers/montanas-con-nieve-en-el-bosque-3934.jpg);
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+	}
+	.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+    }
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+        transition: all .5s ease 0s;
+        border-radius: 30px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	.cuerpo{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color: #ecf0f1;
+        font-size: 14px;
+	}
+	.cuerpo h1{
+        text-align: center;
+        margin: 40px 0 40px;
+        text-align: center;
+        font-size: 60px;
+        color: #ecf0f1;
+        text-shadow: 4px 4px 8px #000000;
+        font-family: 'Jokerman', cursive;
+	}
+	.cuerpo ol{
+		background: black;
+		width: 450px;
+	    text-align: left;
+		margin: 40px 50px 0px;
+		position:absolute;
+		top:90%;
+		left:30%;
+		box-shadow: 27px 25px 58px -7px rgba(255,255,255,0.31);
+-webkit-box-shadow: 27px 25px 58px -7px rgba(255,255,255,0.31);
+-moz-box-shadow: 27px 25px 58px -7px rgba(255,255,255,0.31);
+	}
+	.cuerpo p {
+        font-size: 20px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+		.indice h2{
+		color: #f3f3f3;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 14px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+
+</style>
+</head>
+<body>
+<br>
+<br>
+
+<div class="cuerpo"><h1 align="center"><font color="red">S</font>olucion de <font color="red">P</font>roblemas</h1 align="center">
+<p>
+  Los problemas que puede resolver estas pagina son los siguientes:
+  <ol align="center">
+  <li>Determinar el mayor de dos números ingresados por el usuario.</li>
+
+<li>Determinar el menor de tres números ingresados por el usuario.</li>
+
+<li>Determinar si un número es positivo, negativo o cero.</li>
+
+<li>Determinar si un número es par o impar.</li>
+
+<li>Solicitar el año de nacimiento y determinar si la persona es mayor de edad o no.</li>
+
+<li>Determinar que descuento recibe el usuario en la compra de unos zapatos.</li>
+
+<li>Determinar si un estudiante es aceptado o no en la universidad en base a los siguientes criterios:
+
+		<dd>7.1. Promedio de bachillerato mayor a 8.5.</dd>
+
+		<dd>7.2. Resultado de EXANI mayor a 1050 puntos.</dd>
+
+		<dd>7.3. Resultado de examen de ingreso mayor a 800 puntos.</dd>
+<li>Determinar el signo zodiacal de una persona.</li>
+
+<li>Determinar el menor, mayor y promedio de una cantidad de números ingresados por el usuario.</li>
+
+<li>Suma de un numero dado por el usuario desde el 0 hasta "n".</li>
+
+<li>Solicitar una cantidad de números, y mostrarlos en orden ascendente.</li>
+  </ol>
+</p>
+</div>
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>Actividad 3</h1>
+			</div>
+			<nav class="menu">
+				<a href="inicio.html">Inicio</a>
+				<a href="informacion.html">Informacion</a>
+				<a href="">creditos</a>
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+          <h2 class="indice" align="center"><font color="red">I</font><font color="#f3f3f3">ndice:</font></h2>
+			<a href="#">Numero mayor</a>
+			<a href="#">Numero menor</a>
+			<a href="#">Numero positivo, negativo o cero</a>
+			<a href="#">Numero par o impar</a>
+			<a href="#">Mayor de edad</a>
+			<a href="#">Descuento de tienda de zapatos</a>
+            <a href="#">Carta de Aceptacion de universidad</a>
+            <a href="#">ejmeplo</a>
+            <a href="#">ejemplo</a>
+            <a href="#">ejmeplo</a>
+            <a href="#">ejmeplo</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+</div>
+</body>
+</html>

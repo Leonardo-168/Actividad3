@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solución de problemas</title>
+<style>
+nav {
+line-height: 50px;
+height: 100%;
+font-size: 15px;
+display: inline-block;
+position: relative;
+z-index: 1;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+color: white;
+cursor: pointer;
+font-family: 'Cherry Swash';
+display:flex;
+align-items: center;
+justify-content: space-around;
+min-height: 8;
+background-color: #294674;
+}
+body {
+    background: #2c3e50;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: '   Swash',cursive;
+    font-size: 18px;
+    padding:0;
+    margin:0;
+    line-height:1.6;
+
+}
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: #ecf0f1;
+    text-shadow: 4px 4px 8px #000000;
+    font-family: 'Black Chancery';
+}
+h2 {
+    text-align: center;
+    font-size: 25px;
+    color: #ecf0f1;
+    text-shadow: 4px 4px 8px #000000;
+    font-family: 'Black Chancery';
+}
+.izquierda{
+height: 100;
+width: 20%;
+}
+.derecha{
+width: 80%;
+height: 100;
+}
+#pantalla-dividida {
+display:flex;
+}
+html{
+ font-size:62.5%;
+ box-sizing: border-box;
+}
+
+*, *::before, *:: after{
+    box-sizing: inherit;
+}
+
+.ham{
+display:none;
+cursor: pointer;
+border: none;
+margin: 0;
+padding: 0;
+background-color: transparent;
+}
+
+.ham span {
+    display:block;
+    background-color: #f3f3f3;
+    height:3px;
+    width:28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.enlaces-menu{
+padding:0;
+}
+
+.enlaces-menu li {
+padding:0 40px;
+list-style-type:none;
+transition:0.5s;
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size:1.8rem;
+    color: white;
+    font-weight:600;
+}
+
+.enlaces-menu li:hover{
+    background-color: rgb(62, 130, 197);
+}
+
+/*DISPOSITIVOS MOVILES*/
+
+@media (max-witdh: 768px) {
+    body{
+        overflow:hidden;
+    }
+    .ham{
+        display:block;
+        position:absolute;
+        top:15px;
+        right:25px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 0;
+    }
+
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        height: 92vh;
+        margin:0;
+        padding:0;
+        width:100%;
+        display:none;
+        opacity: 0;
+    }
+
+    .enlaces-menu li{
+        width:100%;
+        text-align:center;
+        padding:24px;
+    }
+
+@keyframe muestraMenu{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+.enlaces-menu.activado{
+    display:flex;
+    animation:muestraMenu 350ms ese-in-out
+    both;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section id="pantalla-dividida">
+    <div class="izquierda">
+<nav>
+<ul class="enlaces-menu">
+    <h2><font color="red">P</font>aginas Web:</h2>
+    <li><a target="_top" href="inicio.html">Inicio</a></li>
+    <li><a target="_top" href="informacion.html">Informacion</a></li>
+<li><a target="_top" href="">Creditos</a></li>
+    <h2><font color="red">I</font>ndice:</h2>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<li><a href="#">ejemplo</a></li>
+<div class="animation start-hoem"></div>
+</ul>
+<button class="ham" type="button">
+    <span class="br-1"></span>
+    <span class="br-2 "></span>
+    <span class="br-3"></span>
+</button>
+</nav>
+    </div>
+    <div class="derecha"><h1><font color="red">S</font>olucion de <font color="red">P</font>roblemas</h1>
+    <p></p>
+    </div>
+
+</section>
+<script>
+const ham = document.querySelector(".ham");
+const enlances = document.querySelector(".enlaces-menu");
+
+ham.addEventListener("click", () => {
+    enlaces.classList.toggle("activado");
+});
+
+</script>
+</body>
+</html>
